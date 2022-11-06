@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    .pagination span {
+  color: black;
+  float: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination span.active {
+  background-color: dodgerblue;
+  color: white;
+}
+.pagination a:hover:not(.active) {background-color: #ddd;}
+    </style>
+<body>
+    <div style="padding:10px;text-align: center;">
+        <div id="pokemon" style="margin-top: 10px;">
+           
+            <table border="1" style="margin:30px">
+              <thead>
+                <tr style="font-weight:bold">
+                  <td>ID</td>
+                  <td>Name</td>
+                  <td>Weight</td>
+                  <td>Abilities</td>
+                  <td>Moves</td>
+                </tr>
+              </thead>
+              <tbody id="pokemons">
+
+              </tbody>
+            </table>
+
+        </div>
+        <div style="padding:10px;margin-top: 10px;">
+            
+            <div class="pagination" id="pagination">
+                <span style="border:1px solid black; padding:10px;cursor: pointer;" onclick="fetchPokemonlist(10,0,true,false)" id="previous">&laquo; Previous</span>
+                
+                <span style="border:1px solid black; padding:10px;cursor: pointer;" onclick="fetchPokemonlist(10,40,false,true)" id="next">Next &raquo;</span>
+              </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
